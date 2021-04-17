@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;700&display=swap');
+
+:root{
+    --primary-color: #BA7EA0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    
+
+    .container{
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+        background: #eaeaea;
+        display: grid;
+        grid-template-columns: 30% 10% 50% 10%;
+        grid-template-rows: 2em;
+        grid-template-areas: "logo start progress-bar finish";
+        column-gap: 1%;
+        justify-items: start;
+        align-items: center;
+
+    }
+    .logo{
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--primary-color);
+        font-size: 1.2em;
+        justify-self: center;
+    }
+
+    .start{
+        font-weight: regular;
+        color: black;
+        font-size: 1em;
+        justify-self: end;
+    }
+
+    .finish{
+        font-weight: regular;
+        color: black;
+        font-size: 1em;
+    }
+
+    .progress-bar-front{
+        content: '';
+        background: var(--primary-color);
+        width: 30%;
+        margin-left: 5%;
+        height: 1.3em;
+        border-radius: 50px;
+        grid-row-start: 1;
+        grid-column-start: 3;
+        z-index: 2;
+    }
+
+    .progress-bar-back{
+        content: '';
+        background: #c4c4c4;
+        width: 90%;
+        justify-self: center;
+        height: 1.3em;
+        border-radius: 50px;
+        grid-row-start: 1;
+        grid-column-start: 3;
+    }
+
+
+    
+}
+
+
+
+
