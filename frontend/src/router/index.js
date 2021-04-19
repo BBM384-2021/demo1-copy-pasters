@@ -1,7 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import SignIn from "../components/SignIn.vue"
+import SignIn from "../components/SignIn.vue";
+import Questionnaire from "../components/Questionnaire.vue";
+import QuestionnaireResult from "../components/QuestionnaireResult.vue"
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -16,6 +19,18 @@ const routes = [
     name: SignIn,
     component:() =>
       import("../components/SignIn.vue")
+  }, 
+  {
+    path:"/questionnaire",
+    name:Questionnaire,
+    component: () =>
+      import( "../components/Questionnaire.vue")
+  },
+  {
+    path:"/questionnaire-result-page",
+    name:QuestionnaireResult,
+    component: () =>
+      import( "../components/QuestionnaireResult.vue")
   }
 
 ];
