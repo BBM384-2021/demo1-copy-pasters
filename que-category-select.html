@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_files/que-category-select.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Category Selection</h2>
+        <h3 class="subtitle">What are your interests?</h3>
+        <p class="description"><br>Select from the categories. Each category has the related sub-clubs. You can find the sub-clubs that you may want to join and you can choose as many as you wish, but at least one. </p>
+        <p class="categories">Categories</p>
+        <div class="vertical-menu">
+            <button class="accordion">Sports</button>
+            <div class="panel">    
+                <button id = "yoga" class = "photo-button"><img src="images/yoga.jpeg"></button>
+                <p class="sub-club-name">Yoga</p>
+                <button id = "basketball" class = "photo-button"><img src="images/basketball.jpeg"></button>
+                <p class="sub-club-name">Basketball</p>
+                <button id = "tennis" class = "photo-button"><img src="images/tennis.jpeg"></button>
+                <p class="sub-club-name">Tennis</p>
+                <button id = "football" class = "photo-button"><img src="images/football.jpeg"></button>
+                <p class="sub-club-name">Football</p>
+            </div>
+            <button class="accordion">Music</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="accordion">Art</button>
+            <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }
+    </script>
+
+</body>
+</html>
+
+
+    
