@@ -83,6 +83,11 @@ body{
         content: "\2212";
         font-size: 1.1em;
       }
+
+      .vertical-menu .accordion.active {
+        background-color: var(--primary-color);
+        color: white;
+      }
       
       .panel {
         padding: 0 18px;
@@ -90,19 +95,82 @@ body{
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-        align-items: center;
-
-        .photo-button {
-            width: 80px;
-            height: 80px;
-            border: none;
+        
+        ul{
+            list-style-type: none;
             padding: 0;
-            margin: 1em;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        img{
+        li{
+            display: inline-block;
+        }
+
+        input[type="checkbox"][id^="cb"] {
+            display: none;
+        }
+
+        label {
+            grid-column: 1;
+            border: 1px solid #fff;
+            margin: 10px;
+            padding: 10px;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          
+          label::before {
+            background-color: white;
+            color: white;
+            content: " ";
+            display: block;
+            border-radius: 50%;
+            border: 1px solid grey;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 28px;
+            transition-duration: 0.4s;
+            transform: scale(0);
+          }
+          
+          label img {
+            height: 5em;
+            width: 5em;
+            transition-duration: 0.2s;
+            transform-origin: 50% 50%;
+          }
+          
+          :checked+label {
+            border-color: #ddd;
+          }
+          
+          :checked+label::before {
+            content: "✓";
+            background-color: grey;
+            transform: scale(1);
+          }
+          
+          :checked+label img {
+            transform: scale(0.9);
+            box-shadow: 0 0 5px #333;
+            z-index: -1;
+          }
+
+        img {
             display: block;
             height: 80px;
             width: 80px;
@@ -110,17 +178,14 @@ body{
             border-radius: 10px;
             grid-column: 1;
         }
+
         .sub-club-name {
             grid-column: 2;
-            justify-self: center;
             font-size: 1.2em;
         }
       }
 
-      .vertical-menu .accordion.active {
-        background-color: var(--primary-color);
-        color: white;
-      }
+      
 
 }
 
