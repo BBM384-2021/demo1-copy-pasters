@@ -91,7 +91,7 @@
     height: 30px;
     grid-column-start: 3;
     grid-column-end:4;
-    margin-top: 60px;
+    margin-top: 40px;
     place-content: center;
 }
 
