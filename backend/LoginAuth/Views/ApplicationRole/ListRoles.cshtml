@@ -1,0 +1,19 @@
+﻿@model List<ApplicationRole>
+
+@if (Model.Any())
+{
+    <h1>Available roles are listed below.</h1>
+    
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td width="50%">@role.Name</td>
+            <td width="50%">
+                <div class="w-100 btn-group" role="group">
+                    <a asp-action="UpdateRole" asp-route-Id="@role.Id" class="btn btn-primary mx-1">Update</a>
+                    <a asp-action="DeleteRole" asp-route-Id="@role.Id" class="btn btn-danger mx-1">Delete</a>
+                </div>   
+            </td>
+        </tr>
+    }
+}

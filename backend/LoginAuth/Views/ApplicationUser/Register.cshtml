@@ -1,0 +1,34 @@
+﻿@model LoginAuth.Models.ViewModels.ApplicationUserRegisterViewModel
+<h3>Register</h3>
+
+<form asp-action="Register">
+    <table>
+        <tr>
+            <td colspan="3"><div asp-validation-summary="ModelOnly"></div></td>
+        </tr>
+        <tr>
+            <td><label asp-for="UserName"></label></td>
+            <td><input asp-for="UserName" /></td>
+            <td><span asp-validation-for="UserName"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email" /></td>
+            <td><span asp-validation-for="Email"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input asp-for="Password" /></td>
+            <td><span asp-validation-for="Password"></span></td>
+        </tr>
+        
+        <tr>
+            <td><label asp-for="ConfirmPassword"></label></td>
+            <td><input asp-for="ConfirmPassword" /></td>
+            <td><span asp-validation-for="ConfirmPassword"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="submit" value="Register" /></td>
+        </tr>
+    </table>
+</form>
