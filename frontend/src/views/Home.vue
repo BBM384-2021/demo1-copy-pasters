@@ -12,7 +12,7 @@
           <a href="#" class="logo">Logo</a>
         </div>
         <ul>
-          <li><a href="#" class="SignUp">Sign Up</a></li>
+          <li><a href="#" class="SignUp" @click="goToSignUp()">Sign Up</a></li>
           <li><a href="#" class="LogIn" @click="goToSignIn()">Log In</a></li>
           <li><a href="#" class="About">About</a></li>
         </ul>
@@ -36,6 +36,10 @@ export default {
   methods: {
     goToSignIn(){
       this.$router.push({path: "/SignIn"});
+    },
+
+    goToSignUp(){
+      this.$router.push({path: "/SignUp"});
     }
   },
   components: {
@@ -108,9 +112,9 @@ export default {
     color:rgb(95, 3, 138);
     text-decoration: none;
     font-family: Alegreya Sans;
-    font-size: 130%;
-    
+    font-size: 130%;  
   }
+  
   .header ul li .About{
     color:rgb(51, 50, 51);
   }
